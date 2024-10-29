@@ -1,0 +1,27 @@
+1:
+let nota = prompt('Digite sua nota:')
+let nota1 = parseInt(nota)
+if (nota1 <= 10) {
+alert('Sua nota é ' + nota1)
+} else {
+alert('Nota Inválida')
+
+}
+let nota;
+do {
+nota = parseFloat(prompt('Digite sua nota:'));
+if (isNaN(nota) || nota < 0 || nota > 10); {
+
+
+  
+}
+
+}
+
+2:
+
+
+3:
+
+
+4:
