@@ -1,27 +1,113 @@
 1:
-let nota = prompt('Digite sua nota:')
-let nota1 = parseInt(nota)
-if (nota1 <= 10) {
-alert('Sua nota é ' + nota1)
-} else {
-alert('Nota Inválida')
 
-}
 let nota;
+
 do {
-nota = parseFloat(prompt('Digite sua nota:'));
-if (isNaN(nota) || nota < 0 || nota > 10); {
+  nota = prompt("Digite uma nota entre 0 e 10:");
+  nota = parseFloat(nota);
 
+  if (nota < 0 || nota > 10 || isNaN(nota)) {
+    alert("Valor inválido, insira uma nota entre 0 e 10.");
+  }
+} while (nota < 0 || nota > 10 || isNaN(nota));
 
-  
-}
-
-}
+alert("Sua nota é" + nota);
 
 2:
+for (var i = 0; i <= 100; I++) {
 
+document.write(I);
+}
 
 3:
+let nome;
+let senha;
 
+do {
+  nome = prompt("Digite seu nome de usuário:");
+  senha = prompt("Digite sua senha:");
+
+  if (senha === nome) {
+    alert("Erro! Senha incorreta, Tente novamente.");
+  }
+} while (senha === nome);
+
+alert("Bem vindo!" + nome);
 
 4:
+let nome;
+let idade;
+let salario;
+let sexo;
+let estadocv;
+
+do {
+  nome = prompt("Digite seu nome:");
+  
+
+  if (nome.length <= 3 ) {
+    alert("Nome inválido");
+
+  }
+} while (nome.length <= 3);
+
+do { 
+idade = prompt("Digite sua idade:);
+idade = parseInt(idade);
+
+if (idade < 0 || idade > 150 || isNaN(idade));
+alert("Erro!");
+}
+
+} while (idade < 0 || idade > 150 || isNaN(idade));
+
+
+do { 
+salario = prompt("Digite seu salário:);
+salario = parseFloat(salario);
+
+if (salario <= 0 || isNaN(salario)); 
+alert("Salario inválido!");
+} 
+
+} while (salario <= 0 || isNaN(salario)); 
+
+do { 
+sexo = prompt("Digite seu sexo "f" ou "m":);
+
+if (sexo !== "f" && sexo !== "m")
+alert("Erro! O sexo deve ser "f" para feminino e "m" para masculino.
+} 
+
+} while (sexo !== "f" && sexo !== "m")
+
+do { 
+estadocv = prompt("Digite seu estado cívil: "s" para solteiro(a) "c" para casado(a), "v" para viúvo(a) e "d" para divorciado(a).);
+
+if (estadocv !== 's' || estadocv !== 'c' || estadocv !== 'v' || estadocv !== 'd') {
+alert("Inválido: o estado cívil deve ser "s", "c", "v" ou "d".");
+}
+
+} while (estadocv !== 's' || estadocv !== 'c' || estadocv !== 'v' || estadocv !== 'd');
+
+alert("Informações cadastradas.")
+
+5:
+let populacaoA = 80000;
+let populacaoB = 200000;
+let taxaCrescimentoA = 0.03;
+let taxaCrescimentoB = 0.015;
+let anos = 0;
+
+while (populacaoA < populacaoB) {
+  populacaoA += populacaoA * taxaCrescimentoA;
+  populacaoB += populacaoB * taxaCrescimentoB;
+  anos++;
+}
+
+console.log("Serão necessários " + anos + " anos para que a população do país A ultrapasse ou iguale a população do país B.");
+
+6:
+
+
+
