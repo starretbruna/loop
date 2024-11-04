@@ -105,11 +105,11 @@ while (populacaoA < populacaoB) {
   anos++;
 }
 
-console.log("Serão necessários " + anos + " anos para que a população do país A ultrapasse ou iguale a população do país B.");
+Alert("Serão necessários " + anos + " anos para que a população do país A ultrapasse ou iguale a população do país B.");
 
 6:
 do {
-  let populacaoA = parseFloat(prompt("Digite a população inicial do país A:"));
+  let populacaoA = parseFloat(prompt("Digite a população do país A:"));
   while (isNaN(populacaoA) || populacaoA <= 0) {
     alert("Erro: A população deve ser um número maior que zero.");
     populacaoA = parseFloat(prompt("Digite a população inicial do país A:"));
@@ -121,7 +121,7 @@ do {
     taxaCrescimentoA = parseFloat(prompt("Digite a taxa de crescimento anual do país A (em %):")) / 100;
   }
 
-  let populacaoB = parseFloat(prompt("Digite a população inicial do país B:"));
+  let populacaoB = parseFloat(prompt("Digite a população do país B:"));
   while (isNaN(populacaoB) || populacaoB <= 0) {
     alert("Erro: A população deve ser um número maior que zero.");
     populacaoB = parseFloat(prompt("Digite a população inicial do país B:"));
@@ -145,8 +145,9 @@ do {
 
 } while (confirm("Deseja repetir a operação?"));
 
-
 7:
+
+
 
 
 8:
