@@ -10,8 +10,8 @@ do {
     alert("Valor inválido, insira uma nota entre 0 e 10.");
   }
 } while (nota < 0 || nota > 10 || isNaN(nota));
+alert("Sua nota é " + nota);
 
-alert("Sua nota é" + nota);
 
 2:
 for (var i = 0; i <= 100; I++) {
@@ -146,16 +146,86 @@ do {
 } while (confirm("Deseja repetir a operação?"));
 
 7:
-
-
-
+for (let i = 1; i <= 20; i++) {
+    Document.write(i);
+}
 
 8:
 
 
+
 9:
+let num1;
+let num2;
+let num3;
+let num4;
+let num5;
+let soma;
+let calcularmedia;
+
+do {
+
+  num1 = prompt("Digite um número:");
+  num1 = parseInt(num1);
+
+  if (isNaN(num1)) {
+    alert("Número inválido");
+  }
+} while (isNaN(num1))
+
+
+do { 
+ num2 = prompt("Digite outro número:");
+  num2 = parseInt(num2);
+
+  if (isNaN(num2)) {
+    alert("Número inválido");
+  }
+} while (isNaN(num2))
+
+
+do {
+ num3 = prompt("Digite mais um número:");
+  num3 = parseInt(num3);
+
+  if (isNaN(num3)) {
+    alert("Número inválido");
+  }
+} while (isNaN(num3))
+
+
+do { 
+
+ num4 = prompt("Digite outro número:");
+  num4 = parseInt(num4);
+
+  if (isNaN(num4)) {
+    alert("Número inválido");
+  }
+} while (isNaN(num4))
+
+do { 
+
+ num5 = prompt("Digite mais um número:");
+  num5 = parseInt(num5);
+  soma = parseInt(soma)
+calcularmedia = parseInt(calcularmedia)
+
+  if (isNaN(num5)) {
+    alert("Número inválido");
+  }
+} while (isNaN(num5));
+calcularmedia = (soma / 5)
+console.log("a soma dos números é:") + soma ("e a média é") + calcularmedia;
+
 
 10:
+
+
+11:
+
+
+12:
 
 
 
