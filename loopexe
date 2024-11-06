@@ -408,7 +408,24 @@ function calcularValores(numeros) {
     console.log("Soma dos valores:", soma);
 }
 
-const numeros = [5, 3, 8, 1, 4];
-calcularValores(numeros);
-
 20:
+
+function solicitarNumero() {
+    let numero;
+
+    do {
+        numero = parseInt(prompt("Digite um número entre 0 e 1000:"));
+        
+        if (isNaN(numero)) {
+            alert("Por favor, insira um número válido.");
+        } else if (numero < 0 || numero > 1000) {
+            alert("O número deve estar entre 0 e 1000. Tente novamente.");
+        }
+    } while (isNaN(numero) || numero < 0 || numero > 1000);
+
+    alert("Você digitou: " + numero);
+}
+
+solicitarNumero();
+
+
