@@ -152,80 +152,263 @@ for (let i = 1; i <= 20; i++) {
 
 8:
 
+function acharmaiorNumero() {
+    let maiorNumero = Number.NEGATIVE_INFINITY; 
+    let numeros = [];
+
+  
+    for (let i = 0; i < 5; i++) {
+        let numero = parseFloat(prompt(`Digite o ${i + 1}º número:`));
+        numeros.push(numero); 
+        if (numero > maiorNumero) {
+            maiorNumero = numero; 
+        }
+    }
+
+    console.log(`Os números inseridos foram: ${numeros.join(', ')}`);
+    console.log(`O maior número é: ${maiorNumero}`);
+}
+
+
+acharmaiorNumero();
 
 
 9:
-let num1;
-let num2;
-let num3;
-let num4;
-let num5;
-let soma;
-let calcularmedia;
+function calcularSomaEMedia() {
+    let soma = 0;
+    let numeros = [];
 
-do {
+   
+    for (let i = 1; i <= 5; i++) {
+        let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+        numeros.push(numero);
+        soma += numero;
+    }
 
-  num1 = prompt("Digite um número:");
-  num1 = parseInt(num1);
+   
+    let media = soma / numeros.length;
 
-  if (isNaN(num1)) {
-    alert("Número inválido");
-  }
-} while (isNaN(num1))
-
-
-do { 
- num2 = prompt("Digite outro número:");
-  num2 = parseInt(num2);
-
-  if (isNaN(num2)) {
-    alert("Número inválido");
-  }
-} while (isNaN(num2))
+  
+    console.log(`A soma dos números é: ${soma}`);
+    console.log(`A média dos números é: ${media}`);
+}
 
 
-do {
- num3 = prompt("Digite mais um número:");
-  num3 = parseInt(num3);
-
-  if (isNaN(num3)) {
-    alert("Número inválido");
-  }
-} while (isNaN(num3))
-
-
-do { 
-
- num4 = prompt("Digite outro número:");
-  num4 = parseInt(num4);
-
-  if (isNaN(num4)) {
-    alert("Número inválido");
-  }
-} while (isNaN(num4))
-
-do { 
-
- num5 = prompt("Digite mais um número:");
-  num5 = parseInt(num5);
-  soma = parseInt(soma)
-calcularmedia = parseInt(calcularmedia)
-
-  if (isNaN(num5)) {
-    alert("Número inválido");
-  }
-} while (isNaN(num5));
-calcularmedia = (soma / 5)
-console.log("a soma dos números é:") + soma ("e a média é") + calcularmedia;
+calcularSomaEMedia();
 
 
 10:
 
+for (let i = 1; i <= 50; i++) {
+
+    if (i % 2 !== 0) {
+        console.log(i);
+}
+}
+
+
 
 11:
+function gerarIntervalo(num1, num2) {
+  
+    const inicio = Math.min(num1, num2);
+    const fim = Math.max(num1, num2);
+
+   
+    const intervalo = [];
+
+   
+    for (let i = inicio; i <= fim; i++) {
+        intervalo.push(i);
+    }
+
+    return intervalo;
+}
+
+
+function obterNumeros() {
+    const num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+    const num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+
+    const resultado = gerarIntervalo(num1, num2);
+    console.log(`Números no intervalo: ${resultado.join(", ")}`);
+}
+
+
+obterNumeros();
 
 
 12:
+function gerarIntervaloEDisplaySoma() {
+    let numero1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+    
+    let numero2 = parseInt(prompt("Digite o segundo número inteiro:"));
+    let menor = Math.min(numero1, numero2);
+    let maior = Math.max(numero1, numero2);
+    let soma = 0;
+   
+    let intervalo = [];
+
+   
+    for (let i = menor; i <= maior; i++) {
+        intervalo.push(i);
+        soma += i;
+    }
+    console.log(`Números no intervalo entre ${menor} e ${maior}: ${intervalo.join(', ')}`);
+    console.log(`A soma dos números no intervalo é: ${soma}`);
+}
+gerarIntervaloEDisplaySoma();
+
+
+13;
+
+function gerarTabuada(num) {
+    
+    if (num< 1 || num > 10) {
+        console.log("Por favor, insira um número entre 1 e 10.");
+        return;
+    }
+  
+    console.log(`Tabuada de ${num}:`);
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} X ${i} = ${num * i}`);
+    }
+}
+let numeroUsuario = parseInt(prompt("Digite um número entre 1 e 10 para ver a tabuada:"));
+gerarTabuada(numeroUsuario);
+
+14:
+function gerarIntervalo(num1, num2) {
+    
+    const inicio = Math.min(num1, num2);
+    const fim = Math.max(num1, num2);
+
+    const intervalo = [];
+    for (let i = inicio; i <= fim; i++) {
+        intervalo.push(i);
+    }
+
+    return intervalo;
+}
+
+function obterNumeros() {
+    const num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+    const num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+
+    const resultado = gerarIntervalo(num1, num2);
+    console.log(`Números no intervalo: ${resultado.join(", ")}`);
+}
 
 
 
+
+15:
+function contarParesImpares() {
+    let pares = 0;
+    let impares = 0;
+    for (let i = 0; i < 10; i++) {
+        const numero = parseInt(prompt(`Digite o ${i + 1}º número inteiro:`));
+
+        if (numero % 2 === 0) {
+            pares++;
+        } else {
+            impares++;
+        }
+    }
+
+    alert(`Quantidade de números pares: ${pares}`);
+    alert(`Quantidade de números ímpares: ${impares}`);
+}
+
+
+
+16:
+function gerarFibonacci(n) {
+    if (n <= 0) {
+        console.log("Por favor, insira um número positivo.");
+        return;
+    }
+
+    let fibonacci = [1, 1];
+    for (let i = 2; i < n; i++) {
+        let proximoTermo = fibonacci[i - 1] + fibonacci[i - 2];
+        fibonacci.push(proximoTermo);
+    }
+    console.log(fibonacci.slice(0, n).join(", "));
+}
+let n = 10; // Altere este valor para gerar mais ou menos termos
+gerarFibonacci(n);
+
+
+17:
+function fibonacciGreaterThan500() {
+    let fib = [0, 1]; 
+    let nextFib = fib[0] + fib[1]; 
+
+    while (nextFib <= 500) {
+        fib.push(nextFib); 
+        nextFib = fib[fib.length - 1] + fib[fib.length - 2]; 
+    }
+
+    return fib; 
+}
+
+const resultado = fibonacciGreaterThan500();
+console.log(resultado);
+
+
+18:
+
+function calcularFatorial(numero) {
+   let fatorial = 1;
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i;
+
+    return fatorial; 
+}
+
+
+let numero = parseInt(prompt("Digite um número inteiro:"));
+
+
+if (numero >= 0) {
+     let resultado = calcularFatorial(numero);
+    console.log(`O fatorial de ${numero} é ${resultado}.`);
+} else {
+    console.log("Por favor, insira um número inteiro não negativo.");
+}
+
+
+19:
+function calcularValores(numeros) {
+    if (numeros.length === 0) {
+        console.log("O conjunto de números está vazio.");
+        return;
+    }
+
+    let menor = numeros[0];
+    let maior = numeros[0];
+    let soma = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+        const num = numeros[i];
+        soma += num;
+
+        if (num < menor) {
+            menor = num;
+        }
+
+        if (num > maior) {
+            maior = num;
+        }
+    }
+
+    console.log("Menor valor:", menor);
+    console.log("Maior valor:", maior);
+    console.log("Soma dos valores:", soma);
+}
+
+const numeros = [5, 3, 8, 1, 4];
+calcularValores(numeros);
+
+20:
